@@ -1,0 +1,14 @@
+{% extends "lead_management/base.html" %}
+
+{% block title %}Delete Lead{% endblock %}
+
+{% block content %}
+<h2>Delete Lead</h2>
+<p>Are you sure you want to delete the lead <strong>{{ lead.restaurant_name }}</strong>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+    <a href="{% url 'lead_detail' lead.id %}">Cancel</a>
+</form>
+{% endblock %}

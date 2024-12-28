@@ -1,0 +1,16 @@
+{% extends "lead_management/base.html" %}
+
+{% block title %}
+    {% if edit_mode %}Edit Contact{% else %}Add Contact{% endif %}
+{% endblock %}
+
+{% block content %}
+<h2>{% if edit_mode %}Edit Contact for {{ restaurant_name }}{% else %}Add Contact{% endif %}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">
+        {% if edit_mode %}Save Changes{% else %}Add Contact{% endif %}
+    </button>
+</form>
+{% endblock %}

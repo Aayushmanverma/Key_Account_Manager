@@ -1,0 +1,158 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(135deg, #e8f0ff 0%, #cfd9df 100%);
+    font-family: 'Arial', sans-serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-attachment: fixed; /* Keeps background static when scrolling */
+    background-size: cover;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Text Enhancements */
+.text-danger {
+    font-weight: bold;
+    color: #dc3545 !important; /* Ensure consistency with Bootstrap danger color */
+}
+
+/* Button Group Enhancements */
+.btn-group .btn {
+    margin-right: 5px; /* Spacing between buttons */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-group .btn:hover {
+    transform: scale(1.05);
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: #fff;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #004080);
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #28a745, #218838);
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg, #218838, #19692c);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #dc3545, #c82333);
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(90deg, #c82333, #a71d2a);
+}
+
+/* Add spacing between cards */
+.card + .card {
+    margin-top: 20px;
+}
+
+/* Input and Form Styling */
+input, select, textarea {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #343a40, #212529);
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+        padding: 15px 0;
+    }
+
+    .btn-group .btn {
+        margin-right: 3px;
+        font-size: 0.85rem;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
+/* Add Subtle Background Pattern */
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 1%), radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 1%);
+    background-size: 40px 40px;
+    z-index: -1; /* Keeps pattern behind all elements */
+    opacity: 0.5;
+}
